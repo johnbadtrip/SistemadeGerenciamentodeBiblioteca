@@ -1,34 +1,35 @@
-# Simulação de Terminal de Autoatendimento Bancário
+Sistema de Gerenciamento de Biblioteca (API REST)
+📖 Sobre o Projeto
 
-## Sobre o Projeto
+Esta é uma API RESTful desenvolvida em Java com o ecossistema Spring para gerenciar as operações de uma biblioteca. O projeto permite o cadastro e controle de livros, usuários e empréstimos, aplicando conceitos sólidos de desenvolvimento de APIs e boas práticas de programação.
 
-Este projeto é uma simulação via console de um caixa eletrônico. Ele não se conecta a um banco de dados real, mas simula as operações em memória. O objetivo é demonstrar um design de software robusto e a aplicação correta dos pilares da Programação Orientada a Objetos (Encapsulamento, Herança, Polimorfismo).
+Foi criado como um projeto de estudo para aprofundar os conhecimentos em Spring Boot, Spring Data JPA e na construção de serviços web.
+🛠️ Tecnologias Utilizadas
 
-O usuário interage com o sistema através do terminal, podendo consultar saldo, realizar saques e depósitos em uma conta pré-definida.
+    Java 17
+    Spring Boot: Framework principal para a criação da API.
+    Spring Data JPA: Para a persistência de dados e comunicação com o banco.
+    H2 Database: Banco de dados em memória para testes e ambiente de desenvolvimento.
+    Maven: Gerenciador de dependências do projeto.
+    Postman/Insomnia: Para testes e validação dos endpoints.
 
-## Funcionalidades
+✨ Funcionalidades
 
-* **Autenticação Simples:** O usuário informa o número da conta para iniciar.
-* **Menu de Opções:** Exibe um menu interativo (Consultar Saldo, Depositar, Sacar, Sair).
-* **Operações Bancárias:**
-    * **Consultar Saldo:** Exibe o saldo atual da conta.
-    * **Depositar:** Adiciona um valor ao saldo.
-    * **Sacar:** Remove um valor do saldo, com validação de saldo suficiente.
-* **Encapsulamento:** O saldo da conta não pode ser modificado diretamente, apenas através dos métodos `sacar()` e `depositar()`.
+    Gerenciamento de Livros: CRUD completo (Criar, Ler, Atualizar, Deletar) para os livros da biblioteca.
+    Gerenciamento de Usuários: CRUD completo para os usuários que utilizam a biblioteca.
+    Sistema de Empréstimos: Funcionalidades para registrar o empréstimo de um livro a um usuário e para registrar a devolução.
 
-## Tecnologias Utilizadas
+⚙️ Como Executar
 
-* **Java 17 (Core):**
-    * **Foco Principal em POO:**
-        * **`ContaBancaria` (Classe Principal):** Encapsula os dados (saldo, número) e comportamentos (sacar, depositar).
-        * **`Terminal` (Classe de Interface):** Responsável por interagir com o usuário via `Scanner`.
-        * **`ValidacaoService` (Classe de Serviço):** Lógica separada para validar entradas do usuário e regras de negócio.
-    * **Controle de Fluxo:** Uso de `switch-case` para o menu e `while` para manter a aplicação rodando.
-    * **Tratamento de Exceções:** Para lidar com entradas inválidas do usuário (ex: digitar texto em vez de número).
+Siga os passos abaixo para rodar o projeto localmente:
 
-## Como Executar
+    Clone o repositório:
+    git clone https://github.com/johnbadtrip/SistemadeGerenciamentodeBiblioteca.git
 
-1.  Clone o repositório: `git clone https://github.com/johnbadtrip/apibiblioteca`
-2.  Navegue até o diretório `src`.
-3.  Compile o código: `javac com/terminal/*.java`
-4.  Execute a classe principal: `java com.terminal.Main`
+    Navegue até o diretório do projeto:
+    cd SistemadeGerenciamentodeBiblioteca
+
+    Execute o projeto com o Maven:
+    ./mvnw spring-boot:run
+
+    A aplicação estará disponível em http://localhost:8080.
