@@ -33,3 +33,16 @@ Siga os passos abaixo para rodar o projeto localmente:
     ./mvnw spring-boot:run
 
     A aplicação estará disponível em http://localhost:8080.
+
+📡 Endpoints da API
+
+Aqui estão os principais endpoints disponíveis:
+
+(Repita a estrutura acima para os endpoints de /usuarios e /emprestimos)
+
+🎓 O que aprendi
+
+    Desenvolvimento de uma API RESTful do zero com Spring Boot.
+    Mapeamento de entidades com JPA/Hibernate.
+    Aplicação dos princípios de Injeção de Dependência e Inversão de Controle.
+    Criação de um ambiente de desenvolvimento rápido com banco de dados em memória (H2).
