@@ -35,6 +35,17 @@ public class Livro {
     @Column(name = "numero_paginas")
     private Integer numeroPaginas;
 
+    @Column(name = "emprestado")
+    private boolean emprestado;
+
+    public boolean isEmprestado() {
+        return emprestado;
+    }
+
+    public void setEmprestado(boolean emprestado) {
+        this.emprestado = emprestado;
+    }
+
     // Mapeamento para a relação muitos-para-muitos com Autor
     // @JoinTable define a tabela de junção
     @ManyToMany(fetch = FetchType.LAZY, cascade = { CascadeType.PERSIST, CascadeType.MERGE })

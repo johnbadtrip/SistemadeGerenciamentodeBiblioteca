@@ -74,3 +74,6 @@ public class AutorController {
         }
     }
 }
+
+// Remova esta linha duplicada e fora do lugar:
+// import com.biblioteca.apibiblioteca.controller.dto.AutorDTO;

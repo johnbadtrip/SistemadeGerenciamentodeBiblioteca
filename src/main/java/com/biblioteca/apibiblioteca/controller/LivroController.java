@@ -114,7 +114,7 @@ public class LivroController {
             livroComAutoresAtualizados.setAutores(autores); // Definindo manualmente para o DTO por enquanto
             livroService.salvar(livroComAutoresAtualizados); // Salva as alterações nos autores
 
-            return ResponseEntity.ok(LivroDTO.fromEntity(livroComAutoresAtualizados));
+            return ResponseEntity.ok(livroSalvo);
         } catch (IllegalArgumentException | jakarta.persistence.EntityNotFoundException e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
@@ -138,7 +138,7 @@ public class LivroController {
             Livro livroAtualizado = livroService.adicionarAutorAoLivro(livroId, autorId);
             return ResponseEntity.ok(LivroDTO.fromEntity(livroAtualizado));
         } catch (jakarta.persistence.EntityNotFoundException e) {
-            return ResponseEntity.notFound().body(e.getMessage());
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
         }
     }
 
