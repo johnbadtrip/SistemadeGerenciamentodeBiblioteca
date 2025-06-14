@@ -5,8 +5,8 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.2.0</version> <!-- Você pode ajustar para a versão mais recente do Spring Boot -->
-        <relativePath/> <!-- lookup parent from repository -->
+        <version>3.2.0</version>
+        <relativePath/>
     </parent>
     <groupId>com.biblioteca</groupId>
     <artifactId>api-biblioteca</artifactId>
@@ -15,7 +15,7 @@
     <description>API de Gerenciamento de Biblioteca</description>
     <properties>
         <java.version>17</java.version>
-        <springdoc-openapi.version>2.3.0</springdoc-openapi.version> <!-- Versão mais recente do SpringDoc -->
+        <springdoc-openapi.version>2.3.0</springdoc-openapi.version>
     </properties>
     <dependencies>
         <dependency>
@@ -25,6 +25,27 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-api</artifactId>
+            <version>0.12.3</version>
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-impl</artifactId>
+            <version>0.12.3</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-jackson</artifactId>
+            <version>0.12.3</version>
+            <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -85,5 +106,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
